@@ -1,0 +1,22 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+id="com.batzee.scannerclass"
+version="0.1.0">
+<name>ScannerClass</name>
+<description>PhoneGap Scanner Plugin</description>
+<license>MIT</license>
+<keywords>phonegap,scannerclass</keywords>
+<js-module src="www/scannerclass.js" name="ScannerClass">
+<clobbers target="window.scannerclass" />
+</js-module>
+<!-- android -->
+<platform name="android">
+<config-file target="res/xml/config.xml" parent="/*">
+<feature name="ScannerClass">
+<param name="android-package" value="com.batzee.scannerclass.ScannerClass"/>
+</feature>
+</config-file>
+<source-file src="src/android/ScannerClass.java" target-dir="src/com/batzee/scannerclass" />
+</platform>
+</plugin>
